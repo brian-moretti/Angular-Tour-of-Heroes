@@ -1,0 +1,18 @@
+<!-- ! 4) Preso il codice da 'heroes' -->
+
+<div *ngIf="hero">
+  <h2>{{ hero.name | uppercase }} Details:</h2>
+  <div>
+    <span>Id: {{ hero.id }}</span>
+  </div>
+  <!-- <div><span>Name: {{hero.name}}</span></div> -->
+  <div>
+    <label for="name">Hero Name:</label>
+    <input id="name" type="text" placeholder="name" [(ngModel)]="hero.name" />
+    <!-- Sintassi TWO-WAY BINDING affinché i dati possano fluire dal componente ts verso il template e viceversa con <input> -->
+  </div>
+</div>
+
+<button type="button" (click)="goBack()">Go Back</button> <!-- ?AGGIUNTO AL 6) -->
+<button type="button" (click)="save()">Save Hero</button>
+
